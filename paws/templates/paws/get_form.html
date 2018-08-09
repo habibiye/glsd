@@ -1,0 +1,19 @@
+{% extends "inman/header.html" %}
+
+{% block content %}
+<h2> {{ form_title }} </h2>
+<form action="{{ page }}" method="get">
+        {% for field in form %}
+                    {{ field.errors }}
+                    {{ field.label_tag }}
+                    <div class="form-group"> 
+                        {{ field }}
+                    </div>
+                    {% if field.help_text %}
+                    <p class="help">{{ field.help_text|safe }} </p>
+                    {% endif %}
+        {% endfor %}
+    <input type="submit" value="{{button_msg}}" class="btn btn-primary"/>
+</form>
+
+{% endblock %}

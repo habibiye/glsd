@@ -1,0 +1,64 @@
+{% extends 'inman/header.html' %}
+
+{% block content %}
+<h1> Availability </h1>
+<table class='table table-bordered'>
+	<thead>
+		<tr>
+			<th>Product</th>
+			<th>Material, available amount, required</th>
+			<th>Production goal in quantity</th>
+		</tr>
+	</thead>
+	<tbody>
+			{% for keys, vals in analysis.items %}
+				<tr>
+					<td>{{vals.pd_name}}</td>
+					<td>
+						<table class='table table-hover' style="padding:0;margin:0;width:100%;">
+							{% for ks, vls in vals.items %}
+								{% if ks != 'pd_name' and ks != 'pg'%}
+
+								<tr class='
+									{% if not vls.enough %}
+										danger
+									{% endif %}
+								'>
+									<td> {{vls.item_name}}</td>
+									<td> {{vls.total}}</td>
+									<td>{{vls.required}}</td>
+									<td>{{vls.umpup}}</td>
+									<td><button value="{{keys}}_{{ks}}" class="batch_details">Batch breakdown</button></td>
+									{% if vls.enough %}
+										<td><span class="glyphicon glyphicon-ok" style="color:green;"></span></td>
+									{% else %}
+										<td><span class="glyphicon glyphicon-remove" style="color:red;"></span></td>									
+									{% endif %}
+
+								</tr>
+								<div style="display:none;" id="details_{{keys}}_{{ks}}">
+									{{vls.breakdown}}
+								</div>
+								{% endif %}
+							{% endfor %}
+							
+						</table>
+					</td>
+					<td>{{vals.pg}}</td>
+				</tr>
+			{% endfor %}
+	</tbody>
+</table>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$('.batch_details').click(function(){
+			var id = $(this).val();
+			$('#details_'+id).toggle();
+			console.log($('#details_'+id).text());
+			var obj = JSON.parse($('#details_'+id).text());
+			console.log(obj);
+		});
+
+	});
+</script>
+{% endblock %}

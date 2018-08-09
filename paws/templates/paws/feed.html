@@ -1,0 +1,8 @@
+{% extends "inman/header.html" %}
+{% block content %}
+    {% for entry in entries %}
+        <div class="feed-entry">
+            <p> {{ entry.added_by.username.capitalize }} {{ entry.message }} <a href="{{ entry.url }}">Click Here For more </a></p>
+        </div>
+    {% endfor %}
+{% endblock %}

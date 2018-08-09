@@ -1,0 +1,35 @@
+{% extends "inman/header.html" %}
+{% block content %}
+    <script type="text/javascript">
+
+
+
+    </script>
+    <a href="{{ back }}" style="color:red;font-weight:bold;">&lt&lt Back</a>
+    <p id="message"> {{ message|safe }} </p>
+    <table class="table table-striped table-hover table-bordered">
+    <tbody>
+        {% for field_name, value in object_list %}
+            <tr class="active">
+                <td class="info"> <span style="font-weight:bold;">{{ field_name }}</span> </td>
+                <td class="info"> {{ value }} </td>
+            </tr>
+        {% endfor %}
+        {% for field_name, value, type,msg in additional.values %}
+            <tr class="active">
+                <td class="info"> <span style="font-weight:bold;">{{ field_name }}</span> </td>
+                <td class="info">
+                    {% if type == 'url' %}
+                        <a href="
+                    {% endif %}
+                    {{ value }}
+                    {% if type == 'url' %}
+                        ">{{ msg }}</a>
+                    {% endif %}
+                    </td>
+            </tr>
+        {% endfor %}
+        
+    </tbody>
+    </table>
+{% endblock %}

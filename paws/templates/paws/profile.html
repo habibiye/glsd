@@ -1,0 +1,6 @@
+{% extends "shop/header.html" %}
+
+{% block content %}
+    {% load static %}
+    <img src="{% get_media_prefix %}{{customer.profile_picture.url}}" alt="{{ user.username}}'s picture"/>
+{% endblock %}

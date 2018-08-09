@@ -1,0 +1,26 @@
+{% include "paws/header.html" %}
+{% block content %}
+<table class='table table-hover table-striped'>
+    <thead>
+            <th>channel</th>
+            <th>channelType</th>
+            <th>isFree</th>
+            <th>noiseFloor</th>
+            <th>channelCapacity</th>
+            <th>id</th>
+            
+        </thead>
+    <tbody>
+        {% for result in results %}
+           <tr>
+           {% for key, value in result.items %}
+                <td>{{value}}</td>   
+        {% endfor %}
+           </tr> 
+        {% endfor %}
+    </tbody>
+    </table>
+
+
+
+{% endblock %}

@@ -1,0 +1,23 @@
+{% include "paws/header.html" %}
+{% block content %}
+<table class='table table-hover table-striped'>
+    <thead>
+            <th>Frequency (hz)</th>
+            <th>Power (dBm)</th>            
+        </thead>
+    <tbody>
+        {% for result in results %}
+           <tr>
+           {% for channel in result %}
+               {% for key, value in channel.items %}
+                    <td>{{value}}</td>   
+               {% endfor %}
+           </tr> 
+        {% endfor %}
+        {% endfor %}
+    </tbody>
+    </table>
+
+
+
+{% endblock %}

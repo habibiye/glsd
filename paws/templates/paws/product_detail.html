@@ -1,0 +1,51 @@
+{% extends "inman/header.html" %}
+
+{% block content %}
+    <p><a href="/inman/stock/">&lt&lt Back to stocks</a></p>
+    <table>
+    <tbody>
+    <tr>
+        <td>Item name</td>
+        <td> {{ stock.item_code.name }} </td>
+    </tr>
+    <tr>
+        <td>Batch no</td>
+        <td> {{ stock.batch_no }} </td>
+    </tr>
+    <tr>
+        <td>Date Sampled </td>
+        <td> {{stock.date_sampled }} </td>
+    </tr>
+    <tr>
+        <td>Vendor</td>
+        <td> {{ stock.vendor }} </td>
+    </tr>
+    <tr>
+        <td>Request ARF</td>
+        <td> <a href="/inman/arf/{{ stock.id}} ">ARF</a></td>
+    </tr>
+    <tr>
+        <td>Status</td>
+        <td> {{ stock.status }} </td>
+    </tr>
+    <tr>
+        <td> Received by </td>
+        <td> {{ stock.rxd_by.username }} </td>
+    </tr>
+    <tr>
+        <td> Expiry Date</td>
+        <td> {{ stock.exp_date }} </td>
+    </tr>
+    <tr>
+        <td> Mfg Date</td>
+        <td> {{ stock.mfg_date }} </td>
+    </tr>
+    </tbody>
+    </table>
+    {% for detail in stock.details.all %}
+    {% if forloop.first %}<p>Additional details:</p>{% endif %}
+    <li>{{ detail.attribute.name }}: {{ detail.value }}</li>
+    {% endfor %}
+    
+
+{% endblock %}

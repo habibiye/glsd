@@ -1,0 +1,16 @@
+{% extends "inman/header.html" %}
+
+{% block content %}
+    <h1>ARF requests</h1>
+
+    {% for object in object_list %}
+    <h3><a href="{{ object.get_absolute_url }}">
+    <p>ARF No {{ object.arf_no }} </p></a>
+    <p>Item type: {{ object.stock.item_code.name }}</p>
+    <p> Batch Number: {{ object.stock.batch_no }} </p>
+    <p> Requested by: {{ object.requested_by }} </p>
+    <p> Date requested: {{ object.date_requested }} </p>
+    <p> <a href="{{ object.stock.get_absolute_url }}" target="new">View stock details:</a> <p>
+    {% endfor %}
+
+{% endblock %}

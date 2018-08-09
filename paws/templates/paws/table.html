@@ -1,0 +1,25 @@
+{% extends "inman/header.html" %}
+{% block content %}
+    <h1> {{ title }} </h1>
+    <table class="table table-striped table-bordered table-hover">
+        <thead>
+            
+            <tr>
+            {% for column in column_names %}
+                <th> {{ column }} </th>
+            {% endfor %}
+            <th> More </th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for object in object_list %}
+                <tr class="active">
+                {% for field_name, value in object %}
+                    <td class="info"> {{ value }} </td>
+                {% endfor %}
+                <td> <a href=" {{ object.get_absolute_url }}" target="new" >More details</a> </td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}

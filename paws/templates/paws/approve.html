@@ -1,0 +1,31 @@
+{% extends "inman/header.html" %}
+{% block content %}
+<p class="">{{ message }} </p>
+<p> You are about to approve the following item in stock </p>
+<p>Batch No: {{ stock.batch_no }}</p>
+<p>Status: {{ stock.status }}</p>
+<p>Recieved by: {{ stock.rxd_by}}</p>
+<p>Added to stock: {{stock.date_rxd}}</p>
+<p>Available Amount: {{ stock.amount}} </p>
+<form action="{{ page }}" method="post">
+    {% csrf_token %}
+    <fieldset class="module aligned">
+        {% for field in form %}
+            <div class="form-row">
+                <div>
+                    {{ field.errors }}
+                    {{ field.label_tag }} 
+                    <div class="related-widget-wrapper">
+                        {{ field }}
+                    </div>
+                    {% if field.help_text %}
+                    <p class="help">{{ field.help_text|safe }} </p>
+                    {% endif %}
+                </div>
+            </div>
+        {% endfor %}
+    </fieldset>
+    <input type="submit" value="{{button_msg}}" class="btn btn-primary"/>
+</form>
+
+{% endblock %}

@@ -1,0 +1,13 @@
+{% extends "inman/header.html" %}
+
+{% block content %}
+    <h1>Cadilla Warehouse: Items in stock</h1>
+
+    {% for object in object_list %}
+    <h3><a href="{{ object.get_absolute_url }}">
+    <p>Item Type: {{ object.item_code.name }} </p></a>
+    <p>Batch Number: {{ object.batch_no }}</p>
+    <p> Status: {{ object.status }} </p>
+    {% endfor %}
+
+{% endblock %}

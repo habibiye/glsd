@@ -1,0 +1,31 @@
+{% extends "inman/header.html" %}
+{% block content %}
+<h2>Stock breakdown for {{material}}</h2>
+<table>
+	<tr>
+		<td>At hand</td>
+		<td>{{ at_hand }} {{ unit }}</td>
+	</tr>
+	<tr>
+		<td>Quarantine</td>
+		<td> {{ quarantine}} {{ unit }}</td>
+	</tr>
+	<tr>
+		<td>Approved</td>
+		<td> {{ approved }} {{ unit }}</td>
+	</tr>
+	<tr>
+		<td>About to expire</td>
+		<td> {{ expire }} {{ unit }}</td>
+	</tr>
+	<tr>
+		<td>To be retested recently</td>
+		<td> {{ retest }} {{ unit }}</td>
+	</tr>
+	<tr>
+		<td>Place order</td>
+		<td><a href="/inman/order/">Place order</a></td>
+</table>	
+
+
+{% endblock %}

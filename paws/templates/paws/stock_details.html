@@ -1,0 +1,93 @@
+{% extends 'inman/header.html' %}
+
+{% block content %}
+<div id="err_bar">
+	<p style="color:red" id="err_msg"></p>
+</div>
+<div class='products'>
+	{{ form }}
+	<input type="hidden" name="value="no"/>
+	<input type="button" id="btn_add" value="Add" class="btn btn-primary" />
+</div>
+<form method="get" id="form_pds" action='/inman/availability/' onsubmit="return validateForm()">
+	<input type="submit" value="Submit" name="btnPd" id="id_btnPd"/>
+</form>
+
+<div id='lst'>
+	<table class="table">
+		<thead>
+			<tr>
+				<th>Product</th>
+				<th>Production Goal</th>
+				<th>Duration in days</th>
+			</tr>
+		</thead>
+		<tbody id="table_body">
+		</tbody>
+	</table>
+</div>
+<script type="text/javascript">
+	function greaterThanZero(id)
+	{
+		var element = document.getElementById(id);
+		if (element.value > 0)
+		{
+			return true;
+		}
+		return false;
+	}
+	function validateForm()
+	{
+		if ($("#id_0").length)
+		{
+			return true;
+		}
+		return false;
+	}
+	$(document).ready(function(){
+		var count = 0;
+		$("#btn_add").click(function(){
+			if ($('#id_item option').length > 0)
+			{
+				var pg = document.getElementById('id_production_goal').value;
+				var durtn = document.getElementById('id_duration').value;
+				var product = document.getElementById('id_item').value;
+				var pd_name = $("#id_item option:selected").text();
+				if (pg == '' || durtn == '' || product == '')
+				{
+					$("#err_msg").text("All fields are required");
+					return;
+				}
+				if (!greaterThanZero('id_production_goal'))
+				{
+					$("#err_msg").text("Production goal must exceed 0");
+					return;
+				}
+				else if (!greaterThanZero('id_duration'))
+				{
+					$("#err_msg").text("Duration must exceed 0");
+					return;
+				}
+				$("#id_item option").each(function(){
+					if ($(this).val() == product)
+						{
+							$(this).remove();
+						}
+					});
+				console.log(pd_name);
+				$("#table_body").append("<tr><td>"+pd_name+"</td>"+"<td>"+pg+"</td>"+"<td>"+durtn+"</td></tr>");
+				$("#form_pds").append("<input type='text' id='id_"+count+"' name='products[]' style='display:none;' value='"+product+";"+pg+";"+
+					durtn+";"+pd_name+"'/>");
+
+			}
+			else
+			{
+				$("#err_msg").text("All Products already added for review.");
+
+			}
+		});
+	});
+</script>
+
+
+{% endblock %}
