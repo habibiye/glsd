@@ -16,6 +16,8 @@ for entry in json_data:
 			entry[key] = int(value)
 		elif key == 'latitude' or key == 'longtiude' or key == 'frequency' or key == 'maxERP' or key == 'antennaHeight_AGL':
 			entry[key] = float(value)
-results.write(str(json_data))
+json_data = str(json_data)
+json_data = json_data.replace("'",'"')
+results.write(json_data)
 print(type(results))
 results.close()
