@@ -126,9 +126,9 @@ from django.shortcuts import HttpResponse
 #     specs = response['intermediateValues']
 #     return render(request, 'paws/spec.html', {'result': specs})
 def chan(request):
-    height = str(request.GET['h'])
-    latitude = str(request.GET['lat'])
-    longitude = str(request.GET['long'])
+    height = float(request.GET['h'])
+    latitude = float(request.GET['lat'])
+    longitude = float(request.GET['long'])
     message = {
         "method": "csirce.getWebChannels",
         "id": "371506",
