@@ -17,7 +17,7 @@ for entry in json_data:
 		elif key == 'latitude' or key == 'longtiude' or key == 'frequency' or key == 'maxERP' or key == 'antennaHeight_AGL':
 			entry[key] = float(value)
 		elif key == 'siteName':
-			entry[key] = value.replace('(','').replace(')',"")
+			entry[key] = value.replace('(','').replace(')',"").replace('/',"").replace(' ',"")
 json_data = str(json_data)
 json_data = json_data.replace("'",'"')
 results.write(json_data)
