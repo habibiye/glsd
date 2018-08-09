@@ -1,0 +1,5 @@
+steps
+1. cmd....cd desktop/glsd enter
+.....python manage.py runserver
+
+2. copy and paste http://localhost:8000/paws/spec anybrowser
