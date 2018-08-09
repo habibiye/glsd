@@ -126,6 +126,9 @@ from django.shortcuts import HttpResponse
 #     specs = response['intermediateValues']
 #     return render(request, 'paws/spec.html', {'result': specs})
 def chan(request):
+    height = str(request.GET['h'])
+    latitude = str(request.GET['lat'])
+    longitude = str(request.GET['long'])
     message = {
         "method": "csirce.getWebChannels",
         "id": "371506",
@@ -139,12 +142,12 @@ def chan(request):
             "location": {
                 "point": {    
                     "center": {
-                        "latitude": -25.0,
-                        "longitude": 29.0
+                        "latitude": -latitude,
+                        "longitude": longitude
                     }
                 }
             },
-            "antennaHeight_AGL": 10.2,
+            "antennaHeight_AGL": height,
             "propagationModel": "ITU-R P.1546 B",
             "wsdPower": "4 W"
         },
@@ -188,12 +191,12 @@ def intermediate(request):
     elif request.method == 'POST':
         pass        
 def spectrum(request):
-    #     #height = str(request.GET['h'])
-    #     #latitude = str(request.GET['lat'])
-    #     #longitude = str(request.GET['long'])
-    #     #serial = str(request.GET['ser'])
-    #     #model = str(request.GET['mod'])
-    #     #regulator = str(request.GET['reg'])
+    height = str(request.GET['h'])
+    latitude = str(request.GET['lat'])
+    longitude = str(request.GET['long'])
+    serial = str(request.GET['ser'])
+    model = str(request.GET['mod'])
+    regulator = str(request.GET['reg'])
     message = {
         "jsonrpc": "2.0",
         "method": "csirce.getSpectrum",
@@ -207,20 +210,20 @@ def spectrum(request):
             },
             "antenna": {
                 "heightType": "AGL",
-                "height": 10.2
+                "height": height
             },
             "location": {
                 "point": {
                     "center": {
-                        "latitude": -25.0,
-                        "longitude": 29.0
+                        "latitude": latitude,
+                        "longitude": longtiude
                     }
                 }
             },
             "deviceDesc": {
-                "serialNumber": "SN504",
-                "modelId": "MN110",
-                "regulatorId": "FCC110"
+                "serialNumber": serial,
+                "modelId": model,
+                "regulatorId": regulator
             }
         }
     }
