@@ -15,7 +15,7 @@ for entry in json_data:
 		if key == 'recordNumber' or key == 'channel':
 			entry[key] = int(value)
 		elif key == 'latitude' or key == 'longtiude' or key == 'frequency' or key == 'maxERP' or key == 'antennaHeight_AGL':
-			entry[key] = ((float(value) * 1e5)//1)/1.e5
+			entry[key] = ((float(value) * 1e4)//1)/1.e4
 		elif key == 'siteName':
 			entry[key] = value.replace('(','').replace(')',"").replace('/',"").replace(' ',"")
 json_data = str(json_data)
