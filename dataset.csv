@@ -1,6 +1,6 @@
 recordNumber,countryCode,siteName,programme,latitude,longtiude,polarization,status,frequency,channel,maxERP,antennaHeight_AGL,path
-1,ET,FURI(AA),PAL,8.88277778,14.68694444,HOR,Operational,178,5,5,60,Land
-2,ET,FURI(AA),PAL,8.88277778,14.68694444,HOR,Operational,192,7,5,60,Land
+1,ET,FURI,PAL,8.88277778,14.68694444,HOR,Operational,178,5,5,60,Land
+2,ET,FURI,PAL,8.88277778,14.68694444,HOR,Operational,192,7,5,60,Land
 3,ET,HARAR,PAL,42.12444444,9.28861111,HOR,Operational,192,7,1,60,Land
 4,ET,DIRE DAWA,PAL,9.5875,41.83444444,HOR,Operational,178,5,0.25,60,Land
 5,ET,JIJIGA,PAL,9.3525,42.7025,HOR,Operational,192,11,0.2,60,Land
