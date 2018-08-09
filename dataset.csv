@@ -1,4 +1,3 @@
-,,,,,,,,,,,,
 recordNumber,countryCode,siteName,programme,latitude,longtiude,polarization,status,frequency,channel,maxERP,antennaHeight_AGL,path
 1,ET,FURI(AA),PAL,8.88277778,14.68694444,VERT,Operational,178,5,5,60,Land
 2,ET,FURI(AA),PAL,8.88277778,14.68694444,VERT,Operational,192,7,5,60,Land
