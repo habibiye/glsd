@@ -14,11 +14,7 @@ for entry in json_data:
 	for key, value in entry.items():
 		if key == 'recordNumber' or key == 'channel':
 			entry[key] = int(value)
-<<<<<<< HEAD
 		elif key == 'latitude' or key == 'longitude':
-=======
-		elif key == 'latitude' or key == 'longitude' or key == 'frequency' or key == 'maxERP' or key == 'antennaHeight_AGL':
->>>>>>> 671c7c08c3a09d855b5cb776da0e00bfab04cc23
 			entry[key] = ((float(value) * 1e4)//1)/1.e4
 		elif key == 'frequency' or key == 'maxERP' or key == 'antennaHeight_AGL':
 			entry[key] = float(value)
