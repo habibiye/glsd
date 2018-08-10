@@ -1,0 +1,100 @@
+2018-08-10T06:46:15.885413+00:00 heroku[router]: at=info method=GET path="/" host=pure-fjord-19939.herokuapp.com request_id=43b16d85-9407-40b1-80f4-6ce6cfe41722 fwd="197.156.73.170" dyno=web.1 connect=1ms service=327ms status=404 bytes=2689 protocol=https
+2018-08-10T06:46:15.881975+00:00 app[web.1]: Not Found: /
+2018-08-10T06:46:15.882765+00:00 app[web.1]: 10.45.224.215 - - [10/Aug/2018:06:46:15 +0000] "GET / HTTP/1.1" 404 2506 "-" "Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:61.0) Gecko/20100101 Firefox/61.0"
+2018-08-10T06:46:37.000000+00:00 app[api]: Build started by user habibmohammed2001@gmail.com
+2018-08-10T06:46:55.790788+00:00 heroku[router]: at=info method=GET path="/paws/inter" host=pure-fjord-19939.herokuapp.com request_id=7331fcbb-6c7e-469d-8023-7ee410fb0e0b fwd="197.156.73.170" dyno=web.1 connect=1ms service=2036ms status=200 bytes=311 protocol=https
+2018-08-10T06:46:55.786928+00:00 app[web.1]: {'id': '371506', 'error': {'code': -202, 'message': 'INVALID_VALUE'}, 'jsonrpc': '2.0'}
+2018-08-10T06:46:55.788442+00:00 app[web.1]: 10.45.224.215 - - [10/Aug/2018:06:46:55 +0000] "GET /paws/inter HTTP/1.1" 200 121 "-" "Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:61.0) Gecko/20100101 Firefox/61.0"
+2018-08-10T06:47:09.059331+00:00 app[api]: Deploy 671c7c08 by user habibmohammed2001@gmail.com
+2018-08-10T06:47:09.059331+00:00 app[api]: Release v22 created by user habibmohammed2001@gmail.com
+2018-08-10T06:47:09.676512+00:00 heroku[web.1]: Restarting
+2018-08-10T06:47:09.676976+00:00 heroku[web.1]: State changed from up to starting
+2018-08-10T06:47:10.546134+00:00 heroku[web.1]: Stopping all processes with SIGTERM
+2018-08-10T06:47:10.559023+00:00 app[web.1]: [2018-08-10 06:47:10 +0000] [4] [INFO] Handling signal: term
+2018-08-10T06:47:10.560468+00:00 app[web.1]: [2018-08-10 06:47:10 +0000] [9] [INFO] Worker exiting (pid: 9)
+2018-08-10T06:47:10.561845+00:00 app[web.1]: [2018-08-10 06:47:10 +0000] [8] [INFO] Worker exiting (pid: 8)
+2018-08-10T06:47:10.760181+00:00 app[web.1]: [2018-08-10 06:47:10 +0000] [4] [INFO] Shutting down: Master
+2018-08-10T06:47:10.926557+00:00 heroku[web.1]: Process exited with status 0
+2018-08-10T06:47:15.035569+00:00 heroku[web.1]: Starting process with command `gunicorn glsd.wsgi`
+2018-08-10T06:47:17.147493+00:00 app[web.1]: [2018-08-10 06:47:17 +0000] [4] [INFO] Starting gunicorn 19.9.0
+2018-08-10T06:47:17.148452+00:00 app[web.1]: [2018-08-10 06:47:17 +0000] [4] [INFO] Listening at: http://0.0.0.0:6205 (4)
+2018-08-10T06:47:17.148606+00:00 app[web.1]: [2018-08-10 06:47:17 +0000] [4] [INFO] Using worker: sync
+2018-08-10T06:47:17.153494+00:00 app[web.1]: [2018-08-10 06:47:17 +0000] [8] [INFO] Booting worker with pid: 8
+2018-08-10T06:47:17.241502+00:00 app[web.1]: [2018-08-10 06:47:17 +0000] [9] [INFO] Booting worker with pid: 9
+2018-08-10T06:47:18.667149+00:00 heroku[web.1]: State changed from starting to up
+2018-08-10T06:47:20.000000+00:00 app[api]: Build succeeded
+2018-08-10T06:47:24.281581+00:00 heroku[router]: at=info method=GET path="/" host=pure-fjord-19939.herokuapp.com request_id=9053fe8e-c722-4ec0-9c4d-4971f4ca7f81 fwd="197.156.73.170" dyno=web.1 connect=1ms service=313ms status=404 bytes=2689 protocol=https
+2018-08-10T06:47:24.275507+00:00 app[web.1]: Not Found: /
+2018-08-10T06:47:24.276256+00:00 app[web.1]: 10.45.224.215 - - [10/Aug/2018:06:47:24 +0000] "GET / HTTP/1.1" 404 2506 "-" "Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:61.0) Gecko/20100101 Firefox/61.0"
+2018-08-10T06:47:28.612847+00:00 heroku[router]: at=info method=GET path="/paws/inter" host=pure-fjord-19939.herokuapp.com request_id=4512fc98-de7a-4d76-a233-08dbe82f7294 fwd="197.156.73.170" dyno=web.1 connect=1ms service=1732ms status=200 bytes=417 protocol=https
+2018-08-10T06:47:28.610070+00:00 app[web.1]: {'result': {'apiVersion': '1.2', 'referenceNo': 'AAITE_2018-08-10T06:47:28Z', 'type': 'ICAL_REQACK', 'status': 'Success', 'timestamp': '2017-11-01T10:12:45Z'}, 'id': '371506', 'jsonrpc': '2.0'}
+2018-08-10T06:47:28.611306+00:00 app[web.1]: 10.45.224.215 - - [10/Aug/2018:06:47:28 +0000] "GET /paws/inter HTTP/1.1" 200 227 "-" "Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:61.0) Gecko/20100101 Firefox/61.0"
+2018-08-10T06:57:43.147983+00:00 heroku[router]: at=info method=HEAD path="/paws/inter" host=pure-fjord-19939.herokuapp.com request_id=f7c8d185-c2e7-4d2c-92ed-7d913f3ae35e fwd="196.24.241.104" dyno=web.1 connect=0ms service=91ms status=500 bytes=3106 protocol=https
+2018-08-10T06:57:43.148399+00:00 app[web.1]: Internal Server Error: /paws/inter
+2018-08-10T06:57:43.148412+00:00 app[web.1]: Traceback (most recent call last):
+2018-08-10T06:57:43.148415+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+2018-08-10T06:57:43.148417+00:00 app[web.1]: response = get_response(request)
+2018-08-10T06:57:43.148420+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.6/site-packages/django/core/handlers/base.py", line 137, in _get_response
+2018-08-10T06:57:43.148423+00:00 app[web.1]: "returned None instead." % (callback.__module__, view_name)
+2018-08-10T06:57:43.148430+00:00 app[web.1]: ValueError: The view paws.views.intermediate didn't return an HttpResponse object. It returned None instead.
+2018-08-10T06:57:43.149388+00:00 app[web.1]: 10.81.159.108 - - [10/Aug/2018:06:57:43 +0000] "HEAD /paws/inter HTTP/1.1" 500 48618 "-" "Java/1.8.0_181"
+2018-08-10T07:00:25.741447+00:00 heroku[router]: at=info method=GET path="/" host=pure-fjord-19939.herokuapp.com request_id=82fac5ad-4e70-4e4e-8660-68e30f2ea773 fwd="197.156.73.170" dyno=web.1 connect=1ms service=9ms status=404 bytes=2689 protocol=https
+2018-08-10T07:00:25.739488+00:00 app[web.1]: Not Found: /
+2018-08-10T07:00:25.740039+00:00 app[web.1]: 10.35.191.213 - - [10/Aug/2018:07:00:25 +0000] "GET / HTTP/1.1" 404 2506 "-" "Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:61.0) Gecko/20100101 Firefox/61.0"
+2018-08-10T07:00:35.055497+00:00 heroku[router]: at=info method=GET path="/paws/inter" host=pure-fjord-19939.herokuapp.com request_id=9e73a562-61c3-4dfd-bdb4-8ba8063a7c6a fwd="197.156.73.170" dyno=web.1 connect=1ms service=1881ms status=200 bytes=417 protocol=https
+2018-08-10T07:00:35.053527+00:00 app[web.1]: {'result': {'apiVersion': '1.2', 'referenceNo': 'AAITE_2018-08-10T07:00:34Z', 'type': 'ICAL_REQACK', 'status': 'Success', 'timestamp': '2017-11-01T10:12:45Z'}, 'id': '371506', 'jsonrpc': '2.0'}
+2018-08-10T07:00:35.054219+00:00 app[web.1]: 10.35.191.213 - - [10/Aug/2018:07:00:35 +0000] "GET /paws/inter HTTP/1.1" 200 227 "-" "Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:61.0) Gecko/20100101 Firefox/61.0"
+2018-08-10T07:01:04.581133+00:00 heroku[router]: at=info method=HEAD path="/paws/inter" host=pure-fjord-19939.herokuapp.com request_id=09038590-9071-46c0-ac94-baf74aa3c407 fwd="196.24.241.104" dyno=web.1 connect=0ms service=42ms status=500 bytes=210 protocol=https
+2018-08-10T07:01:04.577805+00:00 app[web.1]: Internal Server Error: /paws/inter
+2018-08-10T07:01:04.577823+00:00 app[web.1]: Traceback (most recent call last):
+2018-08-10T07:01:04.577834+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+2018-08-10T07:01:04.577836+00:00 app[web.1]: response = get_response(request)
+2018-08-10T07:01:04.577845+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.6/site-packages/django/core/handlers/base.py", line 137, in _get_response
+2018-08-10T07:01:04.577849+00:00 app[web.1]: "returned None instead." % (callback.__module__, view_name)
+2018-08-10T07:01:04.577851+00:00 app[web.1]: ValueError: The view paws.views.intermediate didn't return an HttpResponse object. It returned None instead.
+2018-08-10T07:01:04.578476+00:00 app[web.1]: 10.5.171.245 - - [10/Aug/2018:07:01:04 +0000] "HEAD /paws/inter HTTP/1.1" 500 48616 "-" "Java/1.8.0_181"
+2018-08-10T07:01:20.149215+00:00 heroku[router]: at=info method=HEAD path="/paws/inter" host=pure-fjord-19939.herokuapp.com request_id=be02e632-9a6a-4f49-a5e5-091fdee535c9 fwd="196.24.241.104" dyno=web.1 connect=1ms service=49ms status=500 bytes=3106 protocol=https
+2018-08-10T07:01:20.148367+00:00 app[web.1]: Traceback (most recent call last):
+2018-08-10T07:01:20.148372+00:00 app[web.1]: response = get_response(request)
+2018-08-10T07:01:20.148373+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.6/site-packages/django/core/handlers/base.py", line 137, in _get_response
+2018-08-10T07:01:20.148375+00:00 app[web.1]: "returned None instead." % (callback.__module__, view_name)
+2018-08-10T07:01:20.148383+00:00 app[web.1]: ValueError: The view paws.views.intermediate didn't return an HttpResponse object. It returned None instead.
+2018-08-10T07:01:20.149070+00:00 app[web.1]: 10.93.179.248 - - [10/Aug/2018:07:01:20 +0000] "HEAD /paws/inter HTTP/1.1" 500 48618 "-" "Java/1.8.0_181"
+2018-08-10T07:01:20.148346+00:00 app[web.1]: Internal Server Error: /paws/inter
+2018-08-10T07:01:20.148370+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+2018-08-10T07:01:43.805705+00:00 heroku[router]: at=info method=HEAD path="/paws/inter" host=pure-fjord-19939.herokuapp.com request_id=5695e515-248b-4978-9cb9-77ca00f8ce0b fwd="196.24.241.104" dyno=web.1 connect=0ms service=48ms status=500 bytes=210 protocol=https
+2018-08-10T07:01:43.803466+00:00 app[web.1]: Internal Server Error: /paws/inter
+2018-08-10T07:01:43.803489+00:00 app[web.1]: Traceback (most recent call last):
+2018-08-10T07:01:43.803491+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+2018-08-10T07:01:43.803493+00:00 app[web.1]: response = get_response(request)
+2018-08-10T07:01:43.803495+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.6/site-packages/django/core/handlers/base.py", line 137, in _get_response
+2018-08-10T07:01:43.803497+00:00 app[web.1]: "returned None instead." % (callback.__module__, view_name)
+2018-08-10T07:01:43.803568+00:00 app[web.1]: ValueError: The view paws.views.intermediate didn't return an HttpResponse object. It returned None instead.
+2018-08-10T07:01:43.804674+00:00 app[web.1]: 10.16.204.85 - - [10/Aug/2018:07:01:43 +0000] "HEAD /paws/inter HTTP/1.1" 500 48616 "-" "Java/1.8.0_181"
+2018-08-10T07:02:05.951130+00:00 heroku[router]: at=info method=HEAD path="/paws/inter" host=pure-fjord-19939.herokuapp.com request_id=38ead62a-e1b8-46b1-b68a-6bec91c41eb8 fwd="196.24.241.104" dyno=web.1 connect=0ms service=49ms status=500 bytes=210 protocol=https
+2018-08-10T07:02:05.950326+00:00 app[web.1]: Internal Server Error: /paws/inter
+2018-08-10T07:02:05.950340+00:00 app[web.1]: Traceback (most recent call last):
+2018-08-10T07:02:05.950343+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+2018-08-10T07:02:05.950344+00:00 app[web.1]: response = get_response(request)
+2018-08-10T07:02:05.950346+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.6/site-packages/django/core/handlers/base.py", line 137, in _get_response
+2018-08-10T07:02:05.950348+00:00 app[web.1]: "returned None instead." % (callback.__module__, view_name)
+2018-08-10T07:02:05.950354+00:00 app[web.1]: ValueError: The view paws.views.intermediate didn't return an HttpResponse object. It returned None instead.
+2018-08-10T07:02:05.951029+00:00 app[web.1]: 10.167.30.124 - - [10/Aug/2018:07:02:05 +0000] "HEAD /paws/inter HTTP/1.1" 500 48618 "-" "Java/1.8.0_181"
+2018-08-10T07:02:12.988598+00:00 heroku[router]: at=info method=GET path="/paws/inter" host=pure-fjord-19939.herokuapp.com request_id=44cd1784-8439-4de5-b5b9-4803382fbfc7 fwd="197.156.73.170" dyno=web.1 connect=1ms service=1997ms status=200 bytes=417 protocol=https
+2018-08-10T07:02:12.987913+00:00 app[web.1]: {'result': {'apiVersion': '1.2', 'referenceNo': 'AAITE_2018-08-10T07:02:12Z', 'type': 'ICAL_REQACK', 'status': 'Success', 'timestamp': '2017-11-01T10:12:45Z'}, 'id': '371506', 'jsonrpc': '2.0'}
+2018-08-10T07:02:12.988749+00:00 app[web.1]: 10.30.0.60 - - [10/Aug/2018:07:02:12 +0000] "GET /paws/inter HTTP/1.1" 200 227 "-" "Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:61.0) Gecko/20100101 Firefox/61.0"
+2018-08-10T07:03:27.022649+00:00 app[web.1]: {'result': {'apiVersion': '1.2', 'referenceNo': 'AAITE_2018-08-10T07:03:26Z', 'type': 'ICAL_REQACK', 'status': 'Success', 'timestamp': '2017-11-01T10:12:45Z'}, 'id': '371506', 'jsonrpc': '2.0'}
+2018-08-10T07:03:27.023380+00:00 app[web.1]: 10.9.219.133 - - [10/Aug/2018:07:03:27 +0000] "GET /paws/inter HTTP/1.1" 200 227 "-" "Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:61.0) Gecko/20100101 Firefox/61.0"
+2018-08-10T07:03:27.025626+00:00 heroku[router]: at=info method=GET path="/paws/inter" host=pure-fjord-19939.herokuapp.com request_id=f976a3a7-f68d-4941-9784-6a96eeb7d957 fwd="197.156.73.170" dyno=web.1 connect=0ms service=1869ms status=200 bytes=417 protocol=https
+2018-08-10T07:04:13.725606+00:00 heroku[router]: at=info method=GET path="/paws/inter" host=pure-fjord-19939.herokuapp.com request_id=68788218-e8cb-4c14-94b5-735b6eda5e92 fwd="197.156.73.170" dyno=web.1 connect=0ms service=1309ms status=200 bytes=417 protocol=https
+2018-08-10T07:04:13.722479+00:00 app[web.1]: {'result': {'apiVersion': '1.2', 'referenceNo': 'AAITE_2018-08-10T07:04:13Z', 'type': 'ICAL_REQACK', 'status': 'Success', 'timestamp': '2017-11-01T10:12:45Z'}, 'id': '371506', 'jsonrpc': '2.0'}
+2018-08-10T07:04:13.723482+00:00 app[web.1]: 10.9.219.133 - - [10/Aug/2018:07:04:13 +0000] "GET /paws/inter HTTP/1.1" 200 227 "-" "Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:61.0) Gecko/20100101 Firefox/61.0"
+2018-08-10T07:05:46.655783+00:00 heroku[router]: at=info method=GET path="/" host=pure-fjord-19939.herokuapp.com request_id=e0e2540c-d139-419e-bca4-4557dd83cf70 fwd="197.156.73.170" dyno=web.1 connect=1ms service=7ms status=404 bytes=2689 protocol=https
+2018-08-10T07:05:46.651585+00:00 app[web.1]: Not Found: /
+2018-08-10T07:05:46.652225+00:00 app[web.1]: 10.31.74.203 - - [10/Aug/2018:07:05:46 +0000] "GET / HTTP/1.1" 404 2506 "-" "Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:61.0) Gecko/20100101 Firefox/61.0"
+2018-08-10T07:05:51.934003+00:00 heroku[router]: at=info method=GET path="/paws/inter" host=pure-fjord-19939.herokuapp.com request_id=755b4f70-c08f-4eda-9ea3-c99ccc97482b fwd="197.156.73.170" dyno=web.1 connect=1ms service=2258ms status=200 bytes=417 protocol=https
+2018-08-10T07:05:51.929926+00:00 app[web.1]: {'result': {'apiVersion': '1.2', 'referenceNo': 'AAITE_2018-08-10T07:05:51Z', 'type': 'ICAL_REQACK', 'status': 'Success', 'timestamp': '2017-11-01T10:12:45Z'}, 'id': '371506', 'jsonrpc': '2.0'}
+2018-08-10T07:05:51.931058+00:00 app[web.1]: 10.31.74.203 - - [10/Aug/2018:07:05:51 +0000] "GET /paws/inter HTTP/1.1" 200 227 "-" "Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:61.0) Gecko/20100101 Firefox/61.0"
+2018-08-10T07:05:53.694764+00:00 heroku[router]: at=info method=GET path="/" host=pure-fjord-19939.herokuapp.com request_id=78421783-1b61-4d7c-b444-cf9540858b3d fwd="197.156.73.170" dyno=web.1 connect=1ms service=5ms status=404 bytes=2689 protocol=https
+2018-08-10T07:05:53.691014+00:00 app[web.1]: Not Found: /
+2018-08-10T07:05:53.691525+00:00 app[web.1]: 10.31.74.203 - - [10/Aug/2018:07:05:53 +0000] "GET / HTTP/1.1" 404 2506 "-" "Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:61.0) Gecko/20100101 Firefox/61.0"
