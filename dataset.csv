@@ -1,4 +1,4 @@
-recordNumber,countryCode,siteName,programme,latitude,longtiude,polarization,status,frequency,channel,maxERP,antennaHeight_AGL,path
+recordNumber,countryCode,siteName,programme,latitude,longitude,polarization,status,frequency,channel,maxERP,antennaHeight_AGL,path
 1,ET,FURI,PAL,8.88277778,14.68694444,HOR,Operational,178,5,5,60,Land
 2,ET,FURI,PAL,8.88277778,14.68694444,HOR,Operational,192,7,5,60,Land
 3,ET,HARAR,PAL,42.12444444,9.28861111,HOR,Operational,192,7,1,60,Land
